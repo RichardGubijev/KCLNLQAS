@@ -2,6 +2,7 @@ import requests
 import numpy as np
 import os
 import time
+import json
 
 def download_website(URL: str):
     response = requests.get(URL)
@@ -43,28 +44,44 @@ def extract_link(HTML_lines: np.array):
     filter = "" != extracted_links
     return extracted_links[filter]
 
+def save_as_json(DATA, filename):
+    JSON_DATA = json.dumps(DATA)
+    if os.path.exists(filename):
+        os.remove(filename)
+    with open(filename, "x") as file:
+        file.writelines(JSON_DATA)
+
 def scrape_website(STARTING_URL, K, SLEEP_TIMER): 
     link_queue = [STARTING_URL]
     link_queue_depth = [0]
     links_already_visited = {STARTING_URL}
+    DATA_DICT = {}
+    
+    last_url = ""
 
     while len(link_queue) > 0:
-        LINK = link_queue.pop()
-        DEPTH = link_queue_depth.pop()
-        HTML = download_website(LINK)
+        link = link_queue.pop(0)
+        depth = link_queue_depth.pop(0)
+
+        page = {"Parent_URL": last_url}
+        page += {"URL": link}
+        last_url = link
+
+        HTML = download_website(link)
         HTML_lines = np.array(HTML.splitlines())
-        print(f"{DEPTH} | URL: {LINK}")
+        print(f"{depth} | URL: {link}")
         extracted_links = extract_link(HTML_lines)
-        for link in extracted_links:
-            if DEPTH < K:
-                if link not in links_already_visited:
-                    link_queue.append(link)
-                    link_queue_depth.append(DEPTH + 1)
-                    links_already_visited.add(link)
+        for l in extracted_links:
+            if depth < K:
+                if l not in links_already_visited:
+                    link_queue.append(l)
+                    link_queue_depth.append(depth + 1)
+                    links_already_visited.add(l)
         time.sleep(SLEEP_TIMER)
+
     print(f"Visited: {links_already_visited}")
-    print(f"Last URL: {LINK}")
+    print(f"Last URL: {link}")
+    return DATA_DICT
 
-scrape_website("https://self-service.kcl.ac.uk", 1, 0.0)
-
-c
+data = scrape_website("https://self-service.kcl.ac.uk", 1, 0.0)
+save_as_json(data, "webdata.json")
