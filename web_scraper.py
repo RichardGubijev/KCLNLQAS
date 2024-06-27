@@ -25,10 +25,8 @@ def _extract_link(line):
         return ""
 
     if line.startswith("https://") == False and line.startswith("http://") == False:
-        if line.startswith("~"):
-            return "https://self-service.kcl.ac.uk/" + line
-        else:
-            return "https://self-service.kcl.ac.uk" + line
+        line = line.replace("~", "")
+        return "https://self-service.kcl.ac.uk" + line
     else:
         return line
 
@@ -62,15 +60,21 @@ def scrape_website(STARTING_URL, K, SLEEP_TIMER):
     while len(link_queue) > 0:
         link = link_queue.pop(0)
         depth = link_queue_depth.pop(0)
-
-        page = {"Parent_URL": last_url}
-        page += {"URL": link}
-        last_url = link
+        print(f"{depth} | URL: {link}")
 
         HTML = download_website(link)
         HTML_lines = np.array(HTML.splitlines())
-        print(f"{depth} | URL: {link}")
         extracted_links = extract_link(HTML_lines)
+        
+        webpage = {"parent_URL": last_url}
+        webpage["URL"] =  link
+        webpage["depth"] = depth
+        webpage["extracted_URLs"] = list(extracted_links)
+        webpage["HTML"] = HTML
+        DATA_DICT[link] = webpage
+
+        last_url = link
+
         for l in extracted_links:
             if depth < K:
                 if l not in links_already_visited:
