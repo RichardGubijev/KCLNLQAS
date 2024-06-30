@@ -87,5 +87,6 @@ def scrape_website(STARTING_URL, K, SLEEP_TIMER):
     print(f"Last URL: {link}")
     return DATA_DICT
 
-data = scrape_website("https://self-service.kcl.ac.uk", 1, 0.0)
-save_as_json(data, "webdata.json")
+if __name__ == "__main__":
+    data = scrape_website("https://self-service.kcl.ac.uk", 1, 0.0)
+    save_as_json(data, "webdata.json")
