@@ -19,16 +19,25 @@ def _extract_link(line):
     line = line[line.find("href=") + 6:]
     line = line[:line.find('"')]
 
+    ban_list = ["www", "#", "mailto", "@", "javascript", "outlook.com"]
+    for filter in ban_list: 
+        if filter in line:
+            print(f"!!! Filtered: {line} | Banned string: {filter}")
+            return ""
+
     if line.startswith("http") and "self-service.kcl.ac.uk" not in line:
         return ""
-    if "www" in line or "#" in line:
-        return ""
-
-    if line.startswith("https://") == False and line.startswith("http://") == False:
-        line = line.replace("~", "")
-        return "https://self-service.kcl.ac.uk" + line
-    else:
+    elif "self-service.kcl.ac.uk" in line:
         return line
+        
+    ban_list = ["http", "www", "#", ":", "mailto", "@"]
+    for filter in ban_list: 
+        if filter in line:
+            return ""
+
+    line = line.replace("~", "")
+    return "https://self-service.kcl.ac.uk" + line
+
 
 _extract_link_vec = np.vectorize(_extract_link)
 
@@ -62,18 +71,21 @@ def scrape_website(STARTING_URL, K, SLEEP_TIMER):
         depth = link_queue_depth.pop(0)
         print(f"{depth} | URL: {link}")
 
-        HTML = download_website(link)
+        try:
+            HTML = download_website(link)
+        except:
+            print(f"URL {link} failed, skipping...")
+            continue 
         HTML_lines = np.array(HTML.splitlines())
         extracted_links = extract_link(HTML_lines)
         
-        webpage = {"parent_URL": last_url}
+        webpage = {}
+        # webpage["parent_URL"] = last_url TODO: Fix this cuz that's not parent URL
         webpage["URL"] =  link
         webpage["depth"] = depth
         webpage["extracted_URLs"] = list(extracted_links)
         webpage["HTML"] = HTML
         DATA_DICT[link] = webpage
-
-        last_url = link
 
         for l in extracted_links:
             if depth < K:
@@ -88,5 +100,5 @@ def scrape_website(STARTING_URL, K, SLEEP_TIMER):
     return DATA_DICT
 
 if __name__ == "__main__":
-    data = scrape_website("https://self-service.kcl.ac.uk", 1, 0.0)
+    data = scrape_website("https://self-service.kcl.ac.uk", 4, 0.0)
     save_as_json(data, "webdata.json")
