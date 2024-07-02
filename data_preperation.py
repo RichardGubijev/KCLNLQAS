@@ -26,12 +26,16 @@ def _filter_out_dict(dictionary, filters):
     for k in keys:
         dictionary.pop(k)
 
-def extract_articles(DATA):
-    pass
-
+# Cite: https://stackoverflow.com/questions/328356/extracting-text-from-html-file-using-python
 def _strip_whitespace(TEXT):
-    return re.sub(r"\s+", " ", TEXT)
+    lines = (line.strip() for line in TEXT.splitlines())
+    # break multi-headlines into a line each
+    chunks = (phrase.strip() for line in lines for phrase in line.split("  "))
+    # drop blank lines
+    TEXT = '\n'.join(chunk for chunk in chunks if chunk)
+    return TEXT
 
+# Cite: https://stackoverflow.com/questions/328356/extracting-text-from-html-file-using-python
 def extract_text(WEBPAGE):
     soup = bs4.BeautifulSoup(WEBPAGE["HTML"], "html.parser")
     return _strip_whitespace(soup.get_text())
@@ -64,8 +68,9 @@ def build_graph(DATA):
     pass
 
 
-DATA = load_json("webdata.json")
-print(extract_text(DATA["https://self-service.kcl.ac.uk/article/KA-01971/en-us"]))
-# categories = extract_categories(DATA)
-# add_categories(categories, DATA)
-# save_as_json(DATA, "webdata2.json")
+if __name__ == "__main__":
+    DATA = load_json("webdata.json")
+    print(extract_text(DATA["https://self-service.kcl.ac.uk/article/KA-01971/en-us"]))
+    # categories = extract_categories(DATA)
+    # add_categories(categories, DATA)
+    # save_as_json(DATA, "webdata2.json")
