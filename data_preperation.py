@@ -6,6 +6,12 @@ import html
 from web_scraper import save_as_json
 import re
 
+# // TEMP // 
+import sys
+import io
+
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+
 def load_json(filename):
     if os.path.exists(filename):
         with open(filename, "r", encoding="utf-8") as file:
@@ -25,6 +31,20 @@ def _filter_out_dict(dictionary, filters):
         keys = keys - set(_filter_out_keys(dictionary,f))
     for k in keys:
         dictionary.pop(k)
+
+# def _filter_new_dict(dictionary, filter):
+#     keys = np.array(list(dictionary.keys()))
+#     filter = np.char.find(keys, filter) >= 0
+#     new_dict = dictionary.copy()
+#     for k in keys[filter]:
+#         new_dict.pop(k)
+#     return new_dict
+
+def _filter_new_dict(dictionary, filter):
+    keys = np.array(list(dictionary.keys()))
+    filter = np.char.find(keys, filter) >= 0
+    new_dict = {k: dictionary[k] for k in keys[filter]}
+    return new_dict
 
 # Cite: https://stackoverflow.com/questions/328356/extracting-text-from-html-file-using-python
 def _strip_whitespace(TEXT):
@@ -63,14 +83,26 @@ def add_categories(CATEGORIES, DATA):
                     DATA[a]["category"].append(k)
                 DATA[a]["category_num"] = len(DATA[a]["category"])
                     
+def add_text(DATA):
+    for k in DATA.keys():
+        DATA[k]["text"] = _strip_whitespace(extract_text(DATA[k]))
 
-def build_graph(DATA):
-    pass
-
+def add_title(DATA):
+    for k in DATA.keys():
+        soup = bs4.BeautifulSoup(DATA[k]["HTML"], "html.parser")
+        title = soup.title.string.replace("\r", "").replace("\n","").replace("\t","").replace("\xa0","")
+        title = title[:title.find("·")]
+        DATA[k]["title"] = title
+        print(f"{title}\n")
 
 if __name__ == "__main__":
+    key = "https://self-service.kcl.ac.uk/article/KA-01971/en-us"
     DATA = load_json("webdata.json")
-    print(extract_text(DATA["https://self-service.kcl.ac.uk/article/KA-01971/en-us"]))
+    DATA = _filter_new_dict(DATA, "article")  
+    add_title(DATA)
+
+    # print(DATA[key]["HTML"])
     # categories = extract_categories(DATA)
     # add_categories(categories, DATA)
+    # add_text(DATA)
     # save_as_json(DATA, "webdata2.json")
