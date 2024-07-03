@@ -91,7 +91,7 @@ def add_title(DATA):
     for k in DATA.keys():
         soup = bs4.BeautifulSoup(DATA[k]["HTML"], "html.parser")
         title = soup.title.string.replace("\r", "").replace("\n","").replace("\t","").replace("\xa0","")
-        title = title[:title.find("·")]
+        title = str(title[:title.find("·")])
         DATA[k]["title"] = title
         print(f"{title}\n")
 
