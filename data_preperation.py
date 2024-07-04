@@ -52,7 +52,8 @@ def _strip_whitespace(TEXT):
     # break multi-headlines into a line each
     chunks = (phrase.strip() for line in lines for phrase in line.split("  "))
     # drop blank lines
-    TEXT = '\n'.join(chunk for chunk in chunks if chunk)
+    # TEXT = '\n'.join(chunk for chunk in chunks if chunk)
+    TEXT = ' '.join(chunk for chunk in chunks if chunk)
     return TEXT
 
 # Cite: https://stackoverflow.com/questions/328356/extracting-text-from-html-file-using-python
@@ -85,7 +86,11 @@ def add_categories(CATEGORIES, DATA):
                     
 def add_text(DATA):
     for k in DATA.keys():
-        DATA[k]["text"] = _strip_whitespace(extract_text(DATA[k]))
+        text = _strip_whitespace(extract_text(DATA[k]))
+        DATA[k]["text"] = text[text.find("Print") + 6:
+               text.find("Rate this article")]
+        
+        
 
 def add_title(DATA):
     for k in DATA.keys():
@@ -93,16 +98,17 @@ def add_title(DATA):
         title = soup.title.string.replace("\r", "").replace("\n","").replace("\t","").replace("\xa0","")
         title = str(title[:title.find("·")])
         DATA[k]["title"] = title
-        print(f"{title}\n")
+
+def remove_HTML(DATA):
+    for k in DATA.keys():
+        DATA[k].pop("HTML")
 
 if __name__ == "__main__":
-    key = "https://self-service.kcl.ac.uk/article/KA-01971/en-us"
     DATA = load_json("webdata.json")
-    DATA = _filter_new_dict(DATA, "article")  
-    add_title(DATA)
-
-    # print(DATA[key]["HTML"])
-    # categories = extract_categories(DATA)
-    # add_categories(categories, DATA)
-    # add_text(DATA)
-    # save_as_json(DATA, "webdata2.json")
+    categories = extract_categories(DATA)
+    add_categories(categories, DATA)
+    filtered_DATA = _filter_new_dict(DATA, "/article/")  
+    add_title(filtered_DATA)
+    add_text(filtered_DATA)
+    remove_HTML(filtered_DATA)
+    save_as_json(filtered_DATA, "prepared_data.json")
