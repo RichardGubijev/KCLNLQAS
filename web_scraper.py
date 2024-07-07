@@ -100,5 +100,5 @@ def scrape_website(STARTING_URL, K, SLEEP_TIMER):
     return DATA_DICT
 
 if __name__ == "__main__":
-    data = scrape_website("https://self-service.kcl.ac.uk", 4, 0.0)
+    data = scrape_website("https://self-service.kcl.ac.uk", 7, 0.0)
     save_as_json(data, "webdata.json")
