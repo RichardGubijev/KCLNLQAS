@@ -6,10 +6,9 @@ import html
 from web_scraper import save_as_json
 import re
 
-# // TEMP // 
+# // TEMP FOR OUTPUTTING TEXT// 
 import sys
 import io
-
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 
 def load_json(filename):
