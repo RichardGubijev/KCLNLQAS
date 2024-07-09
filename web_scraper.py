@@ -64,8 +64,6 @@ def scrape_website(STARTING_URL, K, SLEEP_TIMER):
     links_already_visited = {STARTING_URL}
     DATA_DICT = {}
     
-    last_url = ""
-
     while len(link_queue) > 0:
         link = link_queue.pop(0)
         depth = link_queue_depth.pop(0)
@@ -80,7 +78,6 @@ def scrape_website(STARTING_URL, K, SLEEP_TIMER):
         extracted_links = extract_link(HTML_lines)
         
         webpage = {}
-        # webpage["parent_URL"] = last_url TODO: Fix this cuz that's not parent URL
         webpage["URL"] =  link
         webpage["depth"] = depth
         webpage["extracted_URLs"] = list(extracted_links)
@@ -95,8 +92,7 @@ def scrape_website(STARTING_URL, K, SLEEP_TIMER):
                     links_already_visited.add(l)
         time.sleep(SLEEP_TIMER)
 
-    print(f"Visited: {links_already_visited}")
-    print(f"Last URL: {link}")
+    print(f"Visited {len(links_already_visited)} pages")
     return DATA_DICT
 
 if __name__ == "__main__":
