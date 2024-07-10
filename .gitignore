@@ -6,7 +6,8 @@ __pycache__/
 *$py.class
 *.json
 !webdata.json
-
+*test.py
+*.model
 # C extensions
 *.so
 
