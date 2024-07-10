@@ -2,6 +2,7 @@ import numpy as np
 import pandas as pd
 from data_preperation import load_json
 import tfidf_search
+from docuement_embedding import docuement_embedding
 
 def load_data_as_dataframe(filename):
     json_data = load_json(filename)
@@ -9,23 +10,25 @@ def load_data_as_dataframe(filename):
     dataframe = dataframe.reset_index(drop = True)
     return dataframe
 
-def find_k_largest_indicies(array, k):
-    indexed_array = []
-    for i in range(0, len(array)):
-        indexed_array.append([i, float(array[i])])
-    indexed_array.sort(key = lambda x : x[1], reverse= True)
-    return indexed_array[:k]
+if __name__ == "__main__":
+    search_question = "I am having mental health issues, what help is there?"
+    k = 10
 
-search_question = "How do I get finnacial help?"
+    dataframe = load_data_as_dataframe("prepared_data.json")
+    documents = dataframe["text"]
+    titles = dataframe["title"]
 
-dataframe = load_data_as_dataframe("prepared_data.json")
-documents = dataframe["text"]
-titles = dataframe["title"]
+    tfidf = tfidf_search.tfidf(documents = documents)
+    largest_indicies = tfidf.find_closest(search_question, k)
 
-tfidf = tfidf_search.tfidf(documents = documents)
-similarities = tfidf.search(search_question)
+    embed = docuement_embedding("doc2vec_embed.model")
+    closet_doc = embed.find_closest(search_question, k)
 
-largest_indicies = find_k_largest_indicies(similarities, 5)
-for i in largest_indicies:
-    print(titles[i[0]])
+    print("TFIDF")
+    for i in largest_indicies:
+        print(f"{i[1]} - {titles[i[0]]}")
+
+    print("DOC2VEC")
+    for i in closet_doc:
+        print(f"{i[1]} - {titles[i[0]]}")
 
