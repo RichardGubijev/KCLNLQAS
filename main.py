@@ -3,6 +3,7 @@ from web_scraper import scrape_website
 from data_preperation import prepare_data
 from documents_retriever import filter_documents, sort_docuements
 from documents_retriever import load_data_as_dataframe
+from answer_extraction import answer_extractor
 
 def main():
     parser = argparse.ArgumentParser(description="A NLQAS CLI tool for KCL Services")
@@ -34,4 +35,8 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    docs = load_data_as_dataframe("prepared_data.json")
+    qa = answer_extractor(docs)
+    print(qa.extract_answer("Is there industrial action?", 0))
+
+    # main()
