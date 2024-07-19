@@ -2,9 +2,11 @@
 test*
 # Byte-compiled / optimized / DLL files
 __pycache__/
+acrhive/
 *.py[cod]
 *$py.class
 *.json
+!prepared_data.json
 !webdata.json
 *test.py
 *.model
