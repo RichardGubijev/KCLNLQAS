@@ -35,8 +35,13 @@ def main():
 
 
 if __name__ == "__main__":
+    QUESTION = "When are exam resutls for period 3 released?"
+    PASSAGE_ID = 11
     docs = load_data_as_dataframe("prepared_data.json")
     qa = answer_extractor(docs)
-    print(qa.extract_answer("Is there industrial action?", 0))
+    answers = qa.extract_answer(QUESTION, PASSAGE_ID)
+
+    for a in answers:
+        print(f"{a[1]} - {a[0]}\n")
 
     # main()
