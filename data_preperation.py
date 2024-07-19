@@ -88,8 +88,6 @@ def add_text(DATA):
         text = _strip_whitespace(extract_text(DATA[k]))
         DATA[k]["text"] = text[text.find("Print") + 6:
                text.find("Rate this article")]
-        
-        
 
 def add_title(DATA):
     for k in DATA.keys():
@@ -102,7 +100,7 @@ def remove_HTML(DATA):
     for k in DATA.keys():
         DATA[k].pop("HTML")
 
-if __name__ == "__main__":
+def prepare_data():
     DATA = load_json("webdata.json")
     categories = extract_categories(DATA)
     add_categories(categories, DATA)

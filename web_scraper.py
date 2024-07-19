@@ -95,6 +95,6 @@ def scrape_website(STARTING_URL, K, SLEEP_TIMER):
     print(f"Visited {len(links_already_visited)} pages")
     return DATA_DICT
 
-if __name__ == "__main__":
+def scrape_website():
     data = scrape_website("https://self-service.kcl.ac.uk", 7, 0.0)
     save_as_json(data, "webdata.json")
