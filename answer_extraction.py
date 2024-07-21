@@ -1,6 +1,7 @@
 from transformers import AutoTokenizer, AutoModelForQuestionAnswering
 import torch.nn.functional as F
 import torch
+import re
 
 # DISABLE SYMLINKS WARNING MESSAGE IN CONSOLE 
 import os
@@ -8,6 +9,7 @@ os.environ["HF_HUB_DISABLE_SYMLINKS_WARNING"] = "1"
 
 # CODE ADAPTED FROM: https://huggingface.co/docs/transformers/main/en/model_doc/roberta#transformers.RobertaForQuestionAnswering
 # MODEL FROM: https://huggingface.co/deepset/roberta-base-squad2
+
 class answer_extractor:
     def __init__(self, dataset,  model_name = "deepset/roberta-base-squad2") -> None:
         self.dataset = dataset["text"]
@@ -49,3 +51,17 @@ class answer_extractor:
         answers.sort(key= lambda x : x[1], reverse= True)
 
         return answers
+
+    def divide_questions(text: str):
+        questions = []
+        window = ""
+        sentences = re.split("(?<=[.!?])\s+", text)
+        for s in sentences:
+            if len(s) != 0:
+                if s[-1] == "?":
+                    if window != "":
+                        window = window[1:]
+                        questions.append(window)
+                        window = ""
+            window += " "+ s
+        return questions

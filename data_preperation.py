@@ -86,8 +86,9 @@ def add_categories(CATEGORIES, DATA):
 def add_text(DATA):
     for k in DATA.keys():
         text = _strip_whitespace(extract_text(DATA[k]))
-        DATA[k]["text"] = text[text.find("Print") + 6:
-               text.find("Rate this article")]
+        # DATA[k]["text"] = text[text.find("Print") + 6:
+        #        text.find("Rate this article")]
+        DATA[k]["text"] = text
 
 def add_title(DATA):
     for k in DATA.keys():
@@ -109,3 +110,6 @@ def prepare_data():
     add_text(filtered_DATA)
     remove_HTML(filtered_DATA)
     save_as_json(filtered_DATA, "prepared_data.json")
+
+if __name__ == "__main__":
+    prepare_data()
