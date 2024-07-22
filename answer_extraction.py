@@ -36,23 +36,24 @@ class answer_extractor:
         return (self.tokenizer.decode(predict_answer_tokens, skip_special_tokens=True), confidence_score)
 
     def extract_answer(self, question, passage_id):
-        text = self.dataset[passage_id]
+        divided_passages = self.divide_passage_into_questions(self.dataset[passage_id])
         answers = []
-        if len(text) > 250:
-            for i in range(0,len(text) - 250 + 1, 100):
-                window = text[i:i+250]
-                answer = self._answer(question, window)
-                if answer[0] != "":
-                    answers.append(answer)
+        for p in divided_passages:
+            if len(p) > 250:
+                for i in range(0,len(p) - 250 + 1, 100):
+                    window = p[i:i+250]
+                    answer = self._answer(question, window)
+                    if answer[0] != "" and answer[0] != " " and answer[0] != "\t" and answer[0] != "\n" and answer[0] != "\s" and len(answer[0]) != 0:
+                        answers.append(answer)
 
-        else: 
-            answers.append(self._answer(question, text))
+            else: 
+                answers.append(self._answer(question, p))
 
         answers.sort(key= lambda x : x[1], reverse= True)
 
         return answers
 
-    def divide_questions(text: str):
+    def divide_passage_into_questions(self, text: str):
         questions = []
         window = ""
         sentences = re.split("(?<=[.!?])\s+", text)

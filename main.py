@@ -1,9 +1,11 @@
 import argparse
 from web_scraper import scrape_website
 from data_preperation import prepare_data
-from documents_retriever import filter_documents, sort_docuements
+from documents_retriever import filter_documents
 from documents_retriever import load_data_as_dataframe
 from answer_extraction import answer_extractor
+from docuemenet_reranker import docuemenet_reranker
+from document_summarizer import document_summarizer
 
 def main():
     parser = argparse.ArgumentParser(description="A NLQAS CLI tool for KCL Services")
@@ -35,13 +37,30 @@ def main():
 
 
 if __name__ == "__main__":
-    QUESTION = "When are exam resutls for period 3 released?"
-    PASSAGE_ID = 11
+    QUESTION = "When can I retake my exams?"
     docs = load_data_as_dataframe("prepared_data.json")
+    titles = docs["title"]
+    texts = docs["text"]
+    filtered_docs_ind = filter_documents(QUESTION, 10)
+    reranker = docuemenet_reranker(docs)
+    summarizer = document_summarizer(reranker=reranker)
+    sorted_docs = reranker.rerank_indicies(QUESTION, filtered_docs_ind)
     qa = answer_extractor(docs)
-    answers = qa.extract_answer(QUESTION, PASSAGE_ID)
+    answers = qa.extract_answer(QUESTION, sorted_docs[0][0])
+    print("QUESTION:" , QUESTION, "\n")
+
+    for i in sorted_docs:
+        print(titles[i[0]])
+        print(i, "\n")
+
+    print("ANSWERS FROM DOC 1 \n")
 
     for a in answers:
-        print(f"{a[1]} - {a[0]}\n")
+        print(a[0], " - ", a[1])
+
+    # print("\nDOCUEMENT SUMMARIZED\n")
+    # index = sorted_docs[0][0]
+    # print(summarizer.summarize(texts[index]))
+    # print(summarizer.summarize_best_paragraph(QUESTION,texts[sorted_docs[0][0]]))
 
     # main()
