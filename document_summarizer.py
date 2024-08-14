@@ -9,26 +9,30 @@ class document_summarizer:
         self.summarizer = pipeline("summarization", model="facebook/bart-large-cnn")
         self.reranker = reranker
 
-    def summarize(self, doc):
-        return self.summarizer(doc, max_length=int(len(doc)/4), min_length=30, do_sample=False)
+    def sum(self, doc):
+        return self.summarizer(doc, max_length=int(len(doc)/5), min_length=30, do_sample=False)
+            
 
-    def summarize_best_paragraph(self, query, passage):
-        questions = self.divide_passage_into_questions(passage)
-        ranked_passages = self.reranker.rerank(query, passage)
-        return self.summarize(ranked_passages[0][0])
+    def summarize_best_chunk(self, query, passage):
+        chunks = self.chunk(passage)
+        ranked_passages = self.reranker.rerank(query, chunks)
+        ranked_passages.sort(key = lambda x: x[1], reverse = True)
+        return self.sum(ranked_passages[1][0])
 
-    def divide_passage_into_questions(self, text: str):
-        questions = []
+
+    def chunk(self, text: str):
+        chunks = []
         window = ""
         sentences = re.split("(?<=[.!?])\s+", text)
         for s in sentences:
             if len(s) != 0:
-                if s[-1] == "?":
+                if len(window) > 3600:
                     if window != "":
                         window = window[1:]
-                        questions.append(window)
+                        chunks.append(window)
                         window = ""
             window += " "+ s
-        return questions
+        if window.strip():
+            chunks.append(window.strip())
+        return chunks
     
-

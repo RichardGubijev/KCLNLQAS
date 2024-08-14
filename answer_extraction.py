@@ -32,8 +32,8 @@ class answer_extractor:
         start_prob = start_probs[0, answer_start_index].item()
         end_prob = end_probs[0, answer_end_index].item()
         confidence_score = start_prob * end_prob
-
-        return (self.tokenizer.decode(predict_answer_tokens, skip_special_tokens=True), confidence_score)
+        
+        return (str(self.tokenizer.decode(predict_answer_tokens, skip_special_tokens=True)).replace(question, ""), confidence_score)
 
     def extract_answer(self, question, passage_id):
         divided_passages = self.divide_passage_into_questions(self.dataset[passage_id])
@@ -43,11 +43,14 @@ class answer_extractor:
                 for i in range(0,len(p) - 250 + 1, 100):
                     window = p[i:i+250]
                     answer = self._answer(question, window)
-                    if answer[0] != "" and answer[0] != " " and answer[0] != "\t" and answer[0] != "\n" and answer[0] != "\s" and len(answer[0]) != 0:
+                    # if answer[0] != "" and answer[0] != " " and answer[0] != "\t" and answer[0] != "\n" and answer[0] != "\s" and len(answer[0]) != 0:
+                    if answer[0].strip() != "":
                         answers.append(answer)
 
-            else: 
-                answers.append(self._answer(question, p))
+            else:
+                answer = self._answer(question, p)
+                if answer[0].strip() != "":
+                    answers.append(answer)
 
         answers.sort(key= lambda x : x[1], reverse= True)
 

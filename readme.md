@@ -1,5 +1,9 @@
 # KCL NLQAS
 
-Libs: numpy
+All requirmenets listed in requirements.txt
 
-# Richard (Jade) Gubijev 
+To download `pip install -r requirements.txt`
+
+To run the code `python main.py`
+
+# Richard `Jade` Gubijev 

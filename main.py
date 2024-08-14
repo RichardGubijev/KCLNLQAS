@@ -1,66 +1,95 @@
-import argparse
-from web_scraper import scrape_website
-from data_preperation import prepare_data
-from documents_retriever import filter_documents
+import os
+import string
 from documents_retriever import load_data_as_dataframe
 from answer_extraction import answer_extractor
+from docuement_collector import _scrape_website
+from data_preperation import prepare_data
+from documents_retriever import filter_documents
 from docuemenet_reranker import docuemenet_reranker
 from document_summarizer import document_summarizer
 
-def main():
-    parser = argparse.ArgumentParser(description="A NLQAS CLI tool for KCL Services")
-    parser.add_argument("-q", "--query", dest="query", help="Your query to answer")
-    parser.add_argument("-v", "--verbose", dest="verbose", action="store_true", help="Enable verbose mode")
-    parser.add_argument("-d", "--download", dest="download", action="store_true", help="Download/parse the dataset from self-service.kcl.ac.uk")
-    args = parser.parse_args()  
+# Summarizer, needs the articiles broken down into chunks
+# Just steal the one from QA
+# save results to a log file
 
-    if args.download == True:
-        print("Scraping website...")
-        scrape_website()
-        print("Preparing Data...")
-        prepare_data()
-        print("Done...")
+def download_data():
+    if os.path.exists("prepared_data.json"):
+        dc = input("Do you want to (re)download the data? (Y/N):  ")
+        if dc.lower() == "y":
+            _scrape_website()
+            prepare_data
+            print("downloading...")
+        elif dc.lower() != "n":
+            raise Exception(f"Incorrect input: {dc}\n")
+    else: 
+        print("downloading...")
+        _scrape_website()
+        prepare_data
 
-    if args.query:
-        docs = load_data_as_dataframe("prepared_data.json")
-        filtered_docs = filter_documents(args.query, 10)
-        sorted_docs = sort_docuements(args.query, filtered_docs)
-        print(f"Query: {args.query}")
-        
-        if args.verbose:
-            for i in range(len(sorted_docs)):
-                doc_index = sorted_docs[i][0]
-                doc_sim = sorted_docs[i][1]
-                print(f"Title")
-                print(f"Title")
+def write_to_log(text, filename):
+    with open(filename, "w+", encoding= "utf-8") as log_file:
+        log_file.write(text)
+
+def print_log(log, text):
+    log += text
+    print(text)
+    return log
+
+def process_question(question): 
+    question = question.lower()
+    question = question.translate(str.maketrans('', '', string.punctuation))
+    log = f"Question: '{question}'\n"
+    tfidf_set, embed_set = filter_documents(question, 10)
+    whole_set = tfidf_set.union(embed_set)
+    whole_set = tfidf_set
+    sorted_docs = reranker.rerank_indicies(question, whole_set)
+    sorted_docs.sort(key = lambda x: x[1], reverse = True)
+    doc_index = 0
+    answers = qa.extract_answer(question, sorted_docs[doc_index][0])
+    while len(answers) == 0: 
+        doc_index += 1
+        answers = qa.extract_answer(question, sorted_docs[doc_index][0])
+    doc_index = sorted_docs[doc_index][0]
+
+    log = print_log(log, "---- Answer Processing:\n")
+    log = print_log(log, f"**** Used '{titles[doc_index]}' for Answer Processing")
+
+    log = print_log(log, "---- Answer Extraction: \n")
+    for ans in answers:
+        log = print_log(log, f"{ans}" + "\n")
+
+    log = print_log(log, "---- Summarizer: \n")
+    best_doc = texts[sorted_docs[0][0]]
+    log = print_log(log, f"{summarizer.summarize_best_chunk(question, best_doc)[0]['summary_text']} \n")
+
+    log = print_log(log, "---- Document Processing:\n") 
+    log = print_log(log, "---- Ranked Documenets:\n")
+    for doc in sorted_docs:
+        log = print_log(log, f"{titles[doc[0]]}" + f" {doc[1]}" +"\n")
+
+    log = print_log(log, "---- TF-IDF:\n")
+    for index in tfidf_set:
+        log = print_log(log, titles[index] + "\n")
+ 
+    log = print_log(log, "----Doc2Vec:\n")
+    for index in embed_set:
+        log = print_log(log, titles[index] + "\n")
+
+    return log
 
 
+# download_data()
+docs = load_data_as_dataframe("prepared_data.json")
+titles = docs["title"]
+texts = docs["text"]
+reranker = docuemenet_reranker(docs)
+summarizer = document_summarizer(reranker=reranker)
+qa = answer_extractor(docs)
 
-if __name__ == "__main__":
-    QUESTION = "When can I retake my exams?"
-    docs = load_data_as_dataframe("prepared_data.json")
-    titles = docs["title"]
-    texts = docs["text"]
-    filtered_docs_ind = filter_documents(QUESTION, 10)
-    reranker = docuemenet_reranker(docs)
-    summarizer = document_summarizer(reranker=reranker)
-    sorted_docs = reranker.rerank_indicies(QUESTION, filtered_docs_ind)
-    qa = answer_extractor(docs)
-    answers = qa.extract_answer(QUESTION, sorted_docs[0][0])
-    print("QUESTION:" , QUESTION, "\n")
+log_index = 0
 
-    for i in sorted_docs:
-        print(titles[i[0]])
-        print(i, "\n")
-
-    print("ANSWERS FROM DOC 1 \n")
-
-    for a in answers:
-        print(a[0], " - ", a[1])
-
-    # print("\nDOCUEMENT SUMMARIZED\n")
-    # index = sorted_docs[0][0]
-    # print(summarizer.summarize(texts[index]))
-    # print(summarizer.summarize_best_paragraph(QUESTION,texts[sorted_docs[0][0]]))
-
-    # main()
+while True:
+    print("\n\n")
+    question = input("Enter your question: ")
+    log = process_question(question)
+    write_to_log(log, f"{log_index}.txt")

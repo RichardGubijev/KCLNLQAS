@@ -17,15 +17,15 @@ def filter_documents(question_query, k = 10):
     tfidf = tfidf_search.tfidf(documents = documents)
     tfidf_closest_indicies = tfidf.find_closest(question_query, k)
 
-    # embed = docuement_embedding("doc2vec_embed.model")
-    # embed_closest_indicies = embed.find_closest(question_query, k)
+    embed = docuement_embedding("doc2vec_embed.model")
+    embed_closest_indicies = embed.find_closest(question_query, k)
 
-
-    return_set = set()
+    tfid_set = set()
+    embed_set = set()
     for i in range(0, len(tfidf_closest_indicies)):
-        return_set.add(tfidf_closest_indicies[i][0])
-        # return_set.add(embed_closest_indicies[i][0])
-    return set(return_set)
+        tfid_set.add(tfidf_closest_indicies[i][0])
+        embed_set.add(embed_closest_indicies[i][0])
+    return tfid_set, embed_set
 
 def debug_print(tfidf, embed):
     dataframe = load_data_as_dataframe("prepared_data.json")

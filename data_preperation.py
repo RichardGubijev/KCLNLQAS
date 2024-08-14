@@ -3,7 +3,7 @@ import bs4
 import os
 import numpy as np
 import html
-from web_scraper import save_as_json
+from docuement_collector import save_as_json
 import re
 
 # // TEMP FOR OUTPUTTING TEXT// 
