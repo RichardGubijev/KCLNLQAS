@@ -1,0 +1,84 @@
+Question: 'who can help me with long term mental health conditions'
+
+---- Answer Processing:
+****'0 - How can I appeal the outcome of my Stage 3 Support for Study meeting?
+'---- Answer Extraction: 
+
+---- Summarizer: 
+You may have been interrupted or withdrawn from King's on a mandatory basis. Depending on your circumstances, you may have the right to appeal this outcome. Students can appeal via Student Conduct & Appeals by submitting a written statement. 
+
+****'1 - How can the Counselling & Mental Health Support Service help me?
+'---- Answer Extraction: 
+ Counselling & Mental Health Support Service
+ mental health advisors
+ental Health Support Service
+
+---- Summarizer: 
+The Counselling and Mental Health Support Service offers different types of support depending on need. We typically offer up to 6 sessions with a counsellor or Mental Health Advisor. The service runs a number of groups for students and some for staff. 
+
+****'2 - How do I register with Disability Support for the first time?
+'---- Answer Extraction: 
+
+---- Summarizer: 
+How do I register with Disability Support for the first time? · Student Services Online You’re offline. This is a read only version of the page. Skip to main content Skip to footer 
+
+****'3 - My progression status is T4, what does this mean?
+'---- Answer Extraction: 
+
+---- Summarizer: 
+Your full results are now available to view on Student Records. You may wish to get written confirmation of your results so far for prospective employers. You can do this by downloading your Record of Agreed Results (ROAR) letter from Gradintelligence. 
+
+****'4 - Where can I get support for grief & bereavement?
+'---- Answer Extraction: 
+Keywords: grief, bereavement, death, dying, mitigating, circumstances Related Articles (2) How can the Chaplaincy
+
+---- Summarizer: 
+Chaplains can support you if you’re saying goodbye to a loved one, mourning their death, or asking questions about your own mortality. They can also help if you have practical questions about death, such as if you are organising a funeral or would like to hold a memorial service. The following UK organisations provide support, information and advice for people affected by bereavement. 
+
+
+-----------------------
+---- Document Processing:
+---- Ranked Documenets:
+How can I appeal the outcome of my Stage 3 Support for Study meeting? 0.9999999403953552
+How can the Counselling & Mental Health Support Service help me? 0.6127667427062988
+How do I register with Disability Support for the first time? 0.5615030527114868
+My progression status is T4, what does this mean? 0.5038994550704956
+Where can I get support for grief & bereavement? 0.42440977692604065
+Mental health support from Togetherall 0.4162999987602234
+Money issues are affecting my mental health 0.3878791928291321
+Top tips on managing your mental health & wellbeing 0.3232046961784363
+Tips & techniques for managing low mood 0.2887862026691437
+What specialist mental health services can I access? 0.27376192808151245
+I’m finding it hard to adjust to university life, what can I do? 0.23735767602920532
+Support for students with long-term mental health conditions 0.18793942034244537
+Do I need a new Student visa to start my studies at King's? 0.1517828106880188
+My progression status is AP, what does this mean? 0.14887534081935883
+My progression status is BB, what does this mean? 0.12871719896793365
+My progression status is BV, what does this mean? 0.12859264016151428
+What mental health support is available after I graduate? 0.102341428399086
+My progression status is AV, what does this mean? 0.10128200054168701
+Raising awareness about mental health 0.04378229379653931
+
+---- TF-IDF:
+Raising awareness about mental health
+Money issues are affecting my mental health
+Top tips on managing your mental health & wellbeing
+What specialist mental health services can I access?
+How can the Counselling & Mental Health Support Service help me?
+Mental health support from Togetherall
+Tips & techniques for managing low mood
+What mental health support is available after I graduate?
+Support for students with long-term mental health conditions
+How do I register with Disability Support for the first time?
+
+----Doc2Vec:
+How can I appeal the outcome of my Stage 3 Support for Study meeting?
+Top tips on managing your mental health & wellbeing
+My progression status is AP, what does this mean?
+My progression status is AV, what does this mean?
+My progression status is BB, what does this mean?
+Where can I get support for grief & bereavement?
+I’m finding it hard to adjust to university life, what can I do?
+My progression status is T4, what does this mean?
+My progression status is BV, what does this mean?
+Do I need a new Student visa to start my studies at King's?

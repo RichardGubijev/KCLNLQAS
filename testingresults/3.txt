@@ -1,0 +1,141 @@
+Question: 'when do graduation ceremonies take place'
+
+---- Answer Processing:
+****'0 - Am I ready to graduate?
+'---- Answer Extraction: 
+ July
+ January
+ winter
+ July or January
+ January
+ July
+ winter or the summer
+ Royal Festival Hall
+ 31 July you are eligible to attend the summer graduation ceremonies in July
+ winter
+ July
+u don’t complete your course successfully, we will refund you the full cost of any tickets purchased. However, if you wait for your result and miss the booking deadline
+ winter or the summer
+ If you don’t want to attend your graduation ceremony then you may opt to graduate ‘in absentia’
+y and November, you will be invited to attend a ceremony in January. Important to know: Only awarded students will be sent an invite to a ceremony and so invitations will only arrive after your award is conferred
+ between December and June
+ as early
+ If you’re unable to attend the first ceremony you are invited to then you are welcome to defer your place through Student Records and come to the following session of ceremonies
+between 2 May and the 1 November, you will be invited to attend a ceremony in January.If you are/were awarded between 2 November and the 1 May, you will be invited to attend a ceremony in July
+
+---- Summarizer: 
+Graduation ceremonies at King's take place twice a year – in July, our summer ceremonies, and January, our winter ceremonies. Only awarded students will be sent invites to a ceremony and you should not attempt to book if you are not awarded. If you have taken the decision to exit a 4-year course after your third year of study, you will need to first speak to your department confirm your decision. 
+
+****'1 - Key information about graduating and attending your ceremony
+'---- Answer Extraction: 
+ mid-April
+ July
+ graduation ceremonies are taking place at the Royal Festival Hall and Southwark Cathedral
+ within 3 months of the date of your award
+ January
+ once you have received your invite
+ once all your results have been ratified
+ apply for another visa
+Keywords: graduation ceremony date cancelled
+ graduation ceremonies are taking place at the Royal Festival Hall and Southwark Cathedral
+ July
+ July
+ some Faculties are hosting graduations at both venues
+
+---- Summarizer: 
+Undergraduate and postgraduate taught students: If you have completed your studies or you’re expecting to complete your studies between January and July, you will be eligible for the July ceremonies. If you are a student studying on a King’s Digital programme your eligibility to attend a ceremony will be determined by your date of award. For King's Digital students, only awarded students will be sent invites to a ceremony. 
+
+****'2 - Where & when do graduation ceremonies take place?
+'---- Answer Extraction: 
+ late May
+ January and July
+ January and July
+ January and July
+ July of each summer
+ July
+ at Southwark Cathedral in July of each summer.Medical and Dental students may attend either the Southwark ceremonies in July or the ceremonies in the following January
+ January and July
+taff Course (ACSC), which is the JSCSC’s flagship course for UK and international military officers.These students are also given the option to graduate in London at the Royal Festival Hall in July
+ late May
+
+---- Summarizer: 
+The graduation ceremonies at King’s are usually held twice a year, in January and July. Your graduation venue will depend on your department and/or faculty. Medical and Dental students may attend either the Southwark ceremonies in July or the ceremonies in January. 
+
+****'3 - Key information about booking tickets and preparing for your graduation ceremony
+'---- Answer Extraction: 
+ when you book your place for your ceremony
+e able to book a maximum of 2 guest tickets for your ceremony. We maybe be able to offer additional guest tickets if the venue has capacity, but we won't be able to confirm this until later in the booking period
+t Records account in the Graduation tab, and will also be emailed to you upon the successful completion of your booking
+heir own ticket. Children are welcome when accompanied by and seated with adults. Please bear in mind when wishing to bring babies and young children that ceremonies normally last approximately two hours
+ later in the booking period
+ng through the Graduation tab in Student Records until the booking deadline
+d when wishing to bring babies and young children that ceremonies normally last approximately two hours
+ 3
+ graduation ceremony venue Gown hire Information on how to hire your gown will be sent to any student who books a place at a graduation ceremony as part of your booking confirmation; you cannot book your gown until you have booked your ceremony place
+ your invitation may be transferre
+ 2 hours before your ceremony starts
+ If you are unable to attend the date your ceremony has been scheduled for, or believe you have been invited to a ceremony on the incorrect date
+ Student Records
+How can I check the details of my booking? Confirmation of your booking will be shown on your Student Records account in the Graduation tab, and will also be emailed to you upon the successful completion of your booking
+
+---- Summarizer: 
+This article includes information on booking tickets for yourself and guests for your graduation ceremony, gown hire and information on seating and special requirements. Key information about booking tickets and preparing for your ceremony. Student Services Online 
+
+****'4 - What happens in the graduation ceremony?
+'---- Answer Extraction: 
+Medical/Dental ceremonies only
+toge will be collected by an usher after you have crossed the stage
+ Your guests are very welcome to take photographs/video images
+ It is the custom for graduates to shake hands with the Principal and the Chair as they cross the stage
+
+---- Summarizer: 
+Each ceremony will last approximately two hours. There will be a reception after the ceremony for students and their guests. If you are graduating with an AKC, you will wear a black epitoge embroidered with the university's lion 'Reggie', buttoned to the left shoulder. 
+
+
+-----------------------
+---- Document Processing:
+---- Ranked Documenets:
+Am I ready to graduate? 0.9999998807907104
+Key information about graduating and attending your ceremony 0.6367270946502686
+Where & when do graduation ceremonies take place? 0.6266533136367798
+Key information about booking tickets and preparing for your graduation ceremony 0.6105107069015503
+What happens in the graduation ceremony? 0.5783070921897888
+Visa assistance for your graduation ceremony 0.5672756433486938
+Graduation terms and conditions 0.5672154426574707
+How does the university handle academic misconduct? 0.5452030897140503
+Contact Ceremonies & Events 0.5265891551971436
+How can I cancel my tickets and guest tickets for my graduation ceremony? 0.5233104228973389
+How does the university handle non-academic misconduct? 0.5085798501968384
+What is the academic calendar? 0.38194164633750916
+What can I expect during my remote online exam? 0.3350474238395691
+Staying safe online throughout your studies 0.24854305386543274
+What is the code of conduct for the King's Student app? 0.23292112350463867
+My progression status is ‘Awarded (N2)’, what does this mean? 0.20691940188407898
+How can I get an academic/personal reference? 0.19161799550056458
+Photography and filming at your graduation ceremony 0.15758319199085236
+I have further questions about the misconduct process 0.1549031138420105
+How long after I graduate will my student IT account be closed? 0.10021506994962692
+
+---- TF-IDF:
+Am I ready to graduate?
+Key information about booking tickets and preparing for your graduation ceremony
+Visa assistance for your graduation ceremony
+Photography and filming at your graduation ceremony
+What happens in the graduation ceremony?
+Where & when do graduation ceremonies take place?
+Key information about graduating and attending your ceremony
+How can I cancel my tickets and guest tickets for my graduation ceremony?
+Contact Ceremonies & Events
+Graduation terms and conditions
+
+----Doc2Vec:
+How does the university handle academic misconduct?
+How does the university handle non-academic misconduct?
+I have further questions about the misconduct process
+My progression status is ‘Awarded (N2)’, what does this mean?
+How long after I graduate will my student IT account be closed?
+What can I expect during my remote online exam?
+What is the academic calendar?
+Staying safe online throughout your studies
+What is the code of conduct for the King's Student app?
+How can I get an academic/personal reference?

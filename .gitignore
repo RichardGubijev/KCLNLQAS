@@ -1,3 +1,4 @@
+
 *.html
 test*
 # Byte-compiled / optimized / DLL files
@@ -15,6 +16,7 @@ archive/*
 *test.py
 # C extensions
 *.so
+!testingresults
 
 # Distribution / packaging
 .Python

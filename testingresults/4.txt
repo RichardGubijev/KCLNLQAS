@@ -1,0 +1,137 @@
+Question: 'i am disabled student what support is there for me'
+
+---- Answer Processing:
+****'0 - What funding support is available for disabled students?
+'---- Answer Extraction: 
+ Disability Support
+ment and support? Your Disabled Students' Allowance
+You are eligible to apply for Disabled Students' Allowance
+How can I find out more about Disabled Students Allowance? You can find out more information on DSA by visiting the GOV.UK webpages
+What funding is available for disabled students? The main form of funding available to disabled students is the Disabled Students’ Allowance
+ If your support is not meeting your needs
+equipment and/or software
+ou when applying for Disabled Student Allowance; contact Disability Support to arrange an appointment. Important to Know: Disability Support has a fund that provides additional support to students unable to access Disabled Students Allowance funding
+ Specialist equipment and software
+Disability Advisers
+ Our Disability Advisers
+
+---- Summarizer: 
+The main form of funding available to disabled students is the Disabled Students’ Allowance (DSA) This is a grant awarded to students to help pay for the additional costs of studying. DSA will not cover living costs, care costs or tuition fees, so it is worth exploring other opportunities for financial support. 
+
+****'1 - Mental health support during evenings, weekends & vacation periods
+'---- Answer Extraction: 
+ Welfare Leads
+ng Online offers you support 24/7
+
+---- Summarizer: 
+Student Services provides emergency and crisis support for students. Use the weekly Newsquiz to test your knowledge of stories you saw on Student Services. 
+
+****'2 - What are eating disorders, and how can I get help?
+'---- Answer Extraction: 
+
+---- Summarizer: 
+Some useful books Understanding Your Eating, Julia Buckroyd (Open University, 2011) Overcoming Anorexia Nervosa - a self-help guide using Cognitive Behavioural techniques, Freeman, (Constable and Robinson, 2002) On Eating, Susie Orbach (Penguin, 2002). Getting Better - a survival kit for sufferers of bulimia nervosa and binge eating disorders, Schmidt & Treasure. 
+
+****'3 - Accessibility statement for Student Services Online
+'---- Answer Extraction: 
+ty@kcl.ac.uk King’s Disability Support & Inclusion offer information, advice and guidance to current and prospective disabled students about support that may help them to engage with their studies
+
+---- Summarizer: 
+Student Services Online is run by King’s College London and we want as many people as possible to be able to use it. We are continuously improving the content on Student Services Online and regularly audit the site for issues. 
+
+****'4 - What disability support is available for me at King's?
+'---- Answer Extraction: 
+ Disabled Students' Allowance
+ Disabled Students' Allowance
+ extended library loans
+ Disabled Students' Allowance
+ Disabled Students' Allowance
+ via email
+ via email
+ Disabled Students' Allowance
+ Taxi journeys to university
+ Specialist 1:1 tutor hourly sessions
+ Disabled Students' Allowance
+Disabled Students' Allowance
+ Disability Support & Inclusion
+ a Disability Advisor
+ a Disability Advisor
+ Ergonomic equipmentTaxi journeys to university To access this support, you will need to be in receipt of Disabled Students' Allowance
+ a Disability Adviser
+ specialist support
+access this support, you will need to be in receipt of Disabled Students' Allowance
+Who are the Disability Support & Inclusion team
+ity Support. You can also access support from a Disability Adviser
+ a Disability Adviser
+t and assistive technology training can be offered on a limited hours basis to EU/ International students (and those waiting for their application for Disabled Support Allowance
+ and advice on how to apply for the following: Disability Students' Allowance  Personalized Assessment Arrangements (PAA)  Mitigating Circumstances  Additional support for your disability from the team
+ on how to apply for the following: Disability Students' Allowance  Personalized Assessment Arrangements (PAA)  Mitigating Circumstances  Additional support for your disability from the team
+ Disability Support
+ Disability Support for the first time? Support with a King's Inclusion Plan
+ess training to support you when using assistive technology. To discuss this further contact Disability Support. You can also access support from a Disability Adviser
+isability Support & Inclusion
+ire an independent needs assessment (carried out independently of King's). Important to know:​​​​​​ Eligible students are required to provide a £200 contribution towards the laptop. You can also access support from a Disability Advisor
+ts' Allowance (DSA) can also offer you a laptop with specialist learning support software
+Allowance (DSA) can also offer you a laptop with specialist learning support software
+ Specialist Mental Health Mentor ADHD Study Coach
+dance on how to apply for DSA and to view the eligibility criteria, please read our article Funding support for disable students. Disabled Students' Allowance (DSA) can also offer you a laptop with specialist learning support software
+lease read our article Funding support for disabled students. Disabled Students' Allowance (DSA) can also offer you a laptop with specialist learning support software
+ review your supporting evidence before you submit your application
+ eligibility criteria, please read our article Funding support for disable students. Disabled Students' Allowance (DSA) can also offer you a laptop with specialist learning support software
+led Student Allowance Our Disability Advisers can also support you when applying for Disabled Students' Allowance
+Who are Disability Support and Inclusion & how can they support me? Disability Support at King’s are a team of specialist advisers
+upport contact Disability Support. Disabled Students' Allowance (DSA) can also offer you a laptop with specialist learning support software
+Funding non-medical helpers
+ Allowance
+
+---- Summarizer: 
+What disability support is available for me at King's? · Student Services Online You’re offline. This is a read only version of the page. Skip to main content Skip to footer. Toggle navigation Student Services online Search Type to search Student Servicesonline Sign in Home KA-01639 Print 
+
+
+-----------------------
+---- Document Processing:
+---- Ranked Documenets:
+What funding support is available for disabled students? 1.0
+Mental health support during evenings, weekends & vacation periods 0.6918724179267883
+What are eating disorders, and how can I get help? 0.6832060813903809
+Accessibility statement for Student Services Online 0.60272216796875
+What disability support is available for me at King's? 0.5531105995178223
+Support for students with long-term mental health conditions 0.5529405474662781
+How can I submit a late visa application? 0.5360084772109985
+Understanding student status: what does my status mean for me? 0.49788975715637207
+What student support services are available at King's? 0.4765622019767761
+Academic support when taking assessments at King's 0.4629786014556885
+What student support services are available at King's? 0.4454895555973053
+What student support services are available at King's? 0.4454895555973053
+Mental health support during evenings, weekends & vacation periods 0.4454895555973053
+How does the library support disabled students? 0.428120881319046
+Understanding student status: what does my status mean for me? 0.428120881319046
+I have a ‘HyFlex’ seminar/tutorial on my timetable; what is it? 0.3518347442150116
+Am I disabled? Do I qualify for disability support? 0.3518347442150116
+Support for students with mitigating circumstances 0.290815144777298
+How does King's Careers & Employability help disabled students? 0.24122750759124756
+Top tips on how to make the most of your time at King's as a neurodivergent student 0.18447034060955048
+
+---- TF-IDF:
+What funding support is available for disabled students?
+Top tips on how to make the most of your time at King's as a neurodivergent student
+How does the library support disabled students?
+Understanding student status: what does my status mean for me?
+Academic support when taking assessments at King's
+What disability support is available for me at King's?
+Understanding student status: what does my status mean for me?
+Am I disabled? Do I qualify for disability support?
+Support for students with long-term mental health conditions
+How does King's Careers & Employability help disabled students?
+
+----Doc2Vec:
+Mental health support during evenings, weekends & vacation periods
+I have a ‘HyFlex’ seminar/tutorial on my timetable; what is it?
+Support for students with mitigating circumstances
+Accessibility statement for Student Services Online
+What student support services are available at King's?
+What student support services are available at King's?
+What student support services are available at King's?
+Mental health support during evenings, weekends & vacation periods
+What are eating disorders, and how can I get help?
+How can I submit a late visa application?

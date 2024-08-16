@@ -1,0 +1,119 @@
+Question: 'by when do i need to apply for mitigating circumstances'
+
+---- Answer Processing:
+****'0 - My progression status is ‘Cannot Award (NB1)’, what does this mean?
+'---- Answer Extraction: 
+n do this by downloading your Record of Agreed Results (ROAR) letter from Gradintelligence
+
+---- Summarizer: 
+Your progression status is ‘Cannot Award (NB1)’, what does this mean? You have not yet been awarded your degree. You will need to attempt assessments again in the next assessment period and pass them in order to be considered for award. 
+
+****'1 - Events not normally considered mitigating circumstances
+'---- Answer Extraction: 
+
+---- Summarizer: 
+Events not normally considered mitigating circumstances. Holidays and vacations should take place at a time that will not impact on your availability to study. It's your responsibility to arrive at the assessment on time, irrespective of the form of transport used. 
+
+****'2 - How do I get a King’s IT account and email address?
+'---- Answer Extraction: 
+
+---- Summarizer: 
+How do I get a King’s IT account and email address? · Student Services Online You’re offline. This is a read only version of the page. Follow the steps below to fully register your account. 
+
+****'3 - Application deadlines for mitigating circumstances
+'---- Answer Extraction: 
+ as soon as possible
+ before or shortly after an assessment deadline/date
+ Before a deadline or exam date
+ as soon as possible
+ evidence must be submitted to support your claim
+Application deadlines
+ before or shortly after an 
+ urgently
+ 7 calendar days after a deadline or exam date
+ as soon as you’re able
+ 7 calendar days after a deadline or exam date
+ 21 calendar days
+ before or shortly after an assessment deadline/date
+ncourage you to think about how ready you are for an assessment well in advance. This way, you can take proactive steps if you think your circumstances might have a negative impact on your academic performance.Once you know your application deadline
+ Before a deadline or exam date
+ urgently
+Once you know your application deadline
+Once you know your application deadline
+ 21 calendar days
+submit a request no later than 7 calendar days after a deadline or exam date. After resultsMitigating circumstances requests will not be accepted after the publication of results
+
+---- Summarizer: 
+When assessing your application, it will be obvious to the assessor from the dates of your evidence why you could not submit your request more in advance. Mitigating Circumstances request assessment deadline. 
+
+****'4 - How can I apply for mitigating circumstances?
+'---- Answer Extraction: 
+post-submission
+ The Summary and Confirmation stage
+ The Summary and Confirmation stage
+on Plan If your records show that you have a King’s Inclusion Plan, you’ll have the option of including this as part of your supporting evidence. You should only include your KIP as evidence if it's relevant to your circumstances
+ If you believe your ability to complete an assessment of any type might be or has been, adversely affected by mitiga
+ If you believe y
+ deadlines
+the mitigating circumstances application process, where you can review and amend (if necessary) the details of your request before completing your submission
+on deadlines
+ Application deadlines
+ be able to submit your request without completing this field. You must select one of the most appropriate mitigation from the drop-down list
+ if it is your first request
+also read the Student Guide for Submitting a Mitigating Circumstances request via Student Records
+ if it is your first request
+ if it is your first request
+ a mitigating circumstances request. This is a request to be granted an  authorised absence from an assessment or to request for an extension to a submission deadline
+ield:The Current Due Date / Date of Exam is a mandatory field. You will not be able to submit your request without completing this field. If you are entering more than one assessment, you should use the first date
+
+---- Summarizer: 
+If you believe your ability to complete an assessment of any type might be or has been, adversely affected by mitigating circumstances, you should complete and submit a mitigating circumstances request. We have provided basic steps on how to raise a new mitigating circumstances request, provide a summary of circumstances, and linking an assessment to your request below. 
+
+
+-----------------------
+---- Document Processing:
+---- Ranked Documenets:
+My progression status is ‘Cannot Award (NB1)’, what does this mean? 1.0
+Events not normally considered mitigating circumstances 0.6574143171310425
+How do I get a King’s IT account and email address? 0.6432377099990845
+Application deadlines for mitigating circumstances 0.5913956165313721
+How can I apply for mitigating circumstances? 0.5726834535598755
+Outcomes of a mitigating circumstances application 0.5333130359649658
+What are mitigating circumstances? 0.4091646671295166
+My Biometric Residence Permit (BRP) is expiring on 31 December 2024 0.253787100315094
+My progression status is ‘Cannot Award (NB2)’, what does this mean? 0.22763532400131226
+I’m an MBBS or BDS alumni from a few years ago; how can I obtain my transcript? 0.22596469521522522
+I need to prove my module results so far 0.22540108859539032
+What is King’s Counselling Online (KCO)? 0.20476031303405762
+How can I access my Gradintelligence account? 0.19259735941886902
+I'm a postgraduate taught student who's had results released, what more do I need to know? 0.1610436886548996
+If I studied at King's before on a different course, will my account still work? 0.1341644823551178
+How can I apply for 7-day extensions for coursework assessments (including essays and dissertations)? 0.1254124790430069
+How & when can I apply for King's Residences? 0.11781372129917145
+Registering with the Counselling & Mental Health Support Service 0.09979806840419769
+How long after I graduate will my student IT account be closed? 0.07126220315694809
+What do I do if I've forgotten my password or can't log in to King's Apply? 0.06781134009361267
+
+---- TF-IDF:
+Application deadlines for mitigating circumstances
+How can I apply for mitigating circumstances?
+Events not normally considered mitigating circumstances
+Outcomes of a mitigating circumstances application
+My progression status is ‘Cannot Award (NB1)’, what does this mean?
+My progression status is ‘Cannot Award (NB2)’, what does this mean?
+How & when can I apply for King's Residences?
+I'm a postgraduate taught student who's had results released, what more do I need to know?
+How can I apply for 7-day extensions for coursework assessments (including essays and dissertations)?
+What are mitigating circumstances?
+
+----Doc2Vec:
+How do I get a King’s IT account and email address?
+What do I do if I've forgotten my password or can't log in to King's Apply?
+If I studied at King's before on a different course, will my account still work?
+How can I access my Gradintelligence account?
+How long after I graduate will my student IT account be closed?
+I need to prove my module results so far
+I’m an MBBS or BDS alumni from a few years ago; how can I obtain my transcript?
+Registering with the Counselling & Mental Health Support Service
+My Biometric Residence Permit (BRP) is expiring on 31 December 2024
+What is King’s Counselling Online (KCO)?

@@ -1,0 +1,88 @@
+Question: 'i have been a victim of a crime what should i do'
+
+---- Answer Processing:
+****'0 - What is domestic violence & abuse, and what support is available?
+'---- Answer Extraction: 
+ reported to the police
+ reported to the police
+n be a barrier to seeking help. If you are concerned that you have experienced harassment or abuse and you’re not sure what to do
+ report a crime to your local neighbourhood policing team
+ do not hesitate to call 999
+
+---- Summarizer: 
+The Counselling & Mental Health Support Service offers free and confidential counselling and mental health support to students. King's College London subscribes to an online service called Togetherall that you can use if you are feeling down, feeling anxious, or just want someone to talk to. 
+
+****'1 - Common scams & fraud; get to know them and how to avoid them
+'---- Answer Extraction: 
+ learn how to spot them and stay safe online
+
+---- Summarizer: 
+Students are increasingly being targeted by money-related scams. A scenario that is becoming more common is where a third party offers to pay a student's fees on their behalf. There are no discount schemes at King’s, so if you receive any correspondence about discounted fees then it is likely to be fake. 
+
+****'2 - Where can I get support during Ramadan?
+'---- Answer Extraction: 
+
+---- Summarizer: 
+This year, Ramadan begins around 10 March 2024 and ends around 8 April 2024. Fasting during Ramadan is one of the Five Pillars of Islam. King’s has a range of Chaplains from different faith backgrounds. 
+
+****'3 - 5 Steps to more sustainable living
+'---- Answer Extraction: 
+ always report negative experiences
+
+---- Summarizer: 
+Take some time to get outdoors - it’s good for you and the environment. Maternity and baby clothes, and toys are expensive and only needed for such a short period of time. If it sounds too good to be true, it probably is. Be aware of scams. 
+
+****'4 - I think I've been targeted by a scam, what should I do?
+'---- Answer Extraction: 
+ don’t keep it to yourself
+ don’t keep it to yourself
+ email Credit Control
+ contact the Citizen's Consumer helpline
+
+---- Summarizer: 
+UK students are being targeted by scam callers asking for money to be paid over the phone. The scammers pretend to be members of King’s staff or from your bank. The caller will try to persuade you to move your money into another account. If you think you've been targeted by a scam, don't keep it to yourself. You can seek advice and support from teams at King's. 
+
+
+-----------------------
+---- Document Processing:
+---- Ranked Documenets:
+What is domestic violence & abuse, and what support is available? 0.9999998807907104
+Common scams & fraud; get to know them and how to avoid them 0.28763681650161743
+Where can I get support during Ramadan? 0.28021952509880066
+5 Steps to more sustainable living 0.2749117910861969
+I think I've been targeted by a scam, what should I do? 0.2591862678527832
+What is culture shock? 0.2564447820186615
+What are cyber kidnapping scams, and how can I avoid them? 0.24180585145950317
+What evidence do I need to provide for my mitigating circumstances application? 0.22540760040283203
+What is money muling or money laundering, & how can I avoid it? 0.21249347925186157
+How can I avoid scams when purchasing goods & services? 0.14885352551937103
+What digital scams are there, and how can I avoid them? 0.09290218353271484
+How can I find out about NHS services? 0.05660592019557953
+What happens in the graduation ceremony? 0.03880436718463898
+I'm concerned about a student/peer 0.03708568215370178
+What are fraudulent phone calls, and how can I look out for them? 0.009658722206950188
+Staying safe online throughout your studies -0.006384272128343582
+
+---- TF-IDF:
+What is domestic violence & abuse, and what support is available?
+What evidence do I need to provide for my mitigating circumstances application?
+What are fraudulent phone calls, and how can I look out for them?
+What are cyber kidnapping scams, and how can I avoid them?
+How can I find out about NHS services?
+Staying safe online throughout your studies
+What is money muling or money laundering, & how can I avoid it?
+I think I've been targeted by a scam, what should I do?
+Common scams & fraud; get to know them and how to avoid them
+I'm concerned about a student/peer
+
+----Doc2Vec:
+5 Steps to more sustainable living
+What is culture shock?
+Where can I get support during Ramadan?
+What happens in the graduation ceremony?
+What are fraudulent phone calls, and how can I look out for them?
+What digital scams are there, and how can I avoid them?
+How can I avoid scams when purchasing goods & services?
+What is money muling or money laundering, & how can I avoid it?
+Common scams & fraud; get to know them and how to avoid them
+What are cyber kidnapping scams, and how can I avoid them?

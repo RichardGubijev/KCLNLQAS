@@ -1,0 +1,86 @@
+Question: 'how can i register with a doctor'
+
+---- Answer Processing:
+****'0 - What is the King’s Student app and how do I use it?
+'---- Answer Extraction: 
+​​​​​​​​​​How do I download the app? You can download the app via the App Store (iOS) or Google Play (Android) by searching KCL Student. Once you’ve downloaded the app, please login using your K number and password
+
+---- Summarizer: 
+Users can access the app if the device has Google Play services. If the device uses Harmony OS, then the application will not be available to download via Google Play. Users can also access a desktop version of the app. 
+
+****'1 - How can I find out about NHS services?
+'---- Answer Extraction: 
+
+---- Summarizer: 
+The National Health Services (NHS) offers a very wide range of health support services. How can I find out about NHS services? · Student Services Online You’re offline. This is a read only version of the page. 
+
+****'2 - How to request a CAS if you're a current student
+'---- Answer Extraction: 
+
+---- Summarizer: 
+How to request a CAS if you're a current student. Complete the CAS request form. Answer some questions that will help the Visa Compliance team process your request and issue your CAS. 
+
+****'3 - What do I do if I become pregnant while studying?
+'---- Answer Extraction: 
+ If you are registered with the King’s NHS Health Centre
+King’s NHS Health Centre
+ Find a GP webpage
+ Use the NHS's Find a GP webpage
+
+---- Summarizer: 
+Learn how to manage childcare alongside your studies. Use the weekly Newsquiz to test your knowledge of stories you saw on CNN.com. Today's News Quiz includes the chance to win a £1,000 prize. 
+
+****'4 - How can I submit a late visa application?
+'---- Answer Extraction: 
+
+---- Summarizer: 
+You might need to submit a visa application near the start of term for a range of reasons. What you’ll need to do next depends on whether or not you‘re applying inside the UK. You’re applying outside of the UK if you don’t have a visa that allows you to study (including the Graduate Route visa) 
+
+
+-----------------------
+---- Document Processing:
+---- Ranked Documenets:
+What is the King’s Student app and how do I use it? 0.9999997615814209
+How can I find out about NHS services? 0.6122257709503174
+How to request a CAS if you're a current student 0.4172826409339905
+What do I do if I become pregnant while studying? 0.34890100359916687
+How can I submit a late visa application? 0.32787400484085083
+What do I do if I've forgotten my password or can't log in to King's Apply? 0.30247849225997925
+What is the Welcome to King's app and how do I use it? 0.2675843834877014
+Top tips on managing your physical health while studying 0.26615604758262634
+Will Disability Support contact me once I receive an offer to study at King’s? 0.2603077292442322
+Preparing to study at King's 0.25799810886383057
+How can the Health Advisor for Mandarin-Speaking Students support me? 0.2460637390613556
+How do I register with Disability Support for the first time? 0.21792058646678925
+Registering with the Counselling & Mental Health Support Service 0.21237173676490784
+Useful apps while studying at King's 0.21122686564922333
+What vaccines do I need before starting at King’s? 0.1965087354183197
+How is King’s responding to the invasion of Ukraine and what support is available for students? 0.18075157701969147
+Settling into life in London as an international student 0.159759059548378
+What is the Right to Study and why do I need to do it? 0.1582096368074417
+How can I register with a doctor and/or dentist? 0.15055367350578308
+How & when can I apply for King's Residences? 0.09449401497840881
+
+---- TF-IDF:
+How can the Health Advisor for Mandarin-Speaking Students support me?
+Top tips on managing your physical health while studying
+What vaccines do I need before starting at King’s?
+Registering with the Counselling & Mental Health Support Service
+What do I do if I become pregnant while studying?
+How can I register with a doctor and/or dentist?
+How can I find out about NHS services?
+Will Disability Support contact me once I receive an offer to study at King’s?
+How do I register with Disability Support for the first time?
+Settling into life in London as an international student
+
+----Doc2Vec:
+What is the King’s Student app and how do I use it?
+How to request a CAS if you're a current student
+How is King’s responding to the invasion of Ukraine and what support is available for students?
+What do I do if I've forgotten my password or can't log in to King's Apply?
+How & when can I apply for King's Residences?
+What is the Right to Study and why do I need to do it?
+What is the Welcome to King's app and how do I use it?
+Preparing to study at King's
+Useful apps while studying at King's
+How can I submit a late visa application?

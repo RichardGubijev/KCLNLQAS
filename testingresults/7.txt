@@ -1,0 +1,86 @@
+Question: 'when is the second exam period'
+
+---- Answer Processing:
+****'0 - What is the King’s Student app and how do I use it?
+'---- Answer Extraction: 
+
+---- Summarizer: 
+You can access everything you need with the King’s Student app. This includestimetables, KEATS, email, library services and Student Records. The app also includes a curated list of events happening on and off campus. Click the heart icon at the top right of the page to follow and never miss an update. 
+
+****'1 - How can I access my exam & module results?
+'---- Answer Extraction: 
+May
+May
+ after your assessment board has met to finalise and ratify results
+How can I view my results? You can view your results by logging into Student Records
+ an email
+
+---- Summarizer: 
+Exam and assessment results, module results and final degree classifications will be made available on Student Records as soon as possible after your assessment board has met to finalise and ratify results. Results typically released in the following months: For Period 1 (January) assessments: March-April. For Period 2 (May) exams: July​​​​For Period 3 (August) assessments : September. 
+
+****'2 - What’s the difference between open, limited and closed book exams?
+'---- Answer Extraction: 
+
+---- Summarizer: 
+What’s the difference between open, limited and closed book exams? Depending on how your course is assessed, you can be examined in one of three ways. Open book examinations will allow you to bring written or printed material, such as a textbook (with highlights) or written notes into the exam venue. Limited book examinations are an exam where you can bring texts that have been approved by your module leader. In a closed book exam, you are not allowed to bring any written material. 
+
+****'3 - Where can I study on campus?
+'---- Answer Extraction: 
+
+---- Summarizer: 
+Where can I study on campus? · Student Services Online You’re offline. This is a read only version of the page. Use the Daily Mail to help students with reading comprehension and vocabulary. 
+
+****'4 - What are the different ways I can be assessed at King’s?
+'---- Answer Extraction: 
+
+---- Summarizer: 
+If you have overlapping 24-hour assessments within your timetable, you are expected to manage your time throughout this period to submit your assessments before the submission deadlines. Online exams will be also subject to our normal processes, such as the use of plagiarism detection software, and formal university procedures where evidenced. 
+
+
+-----------------------
+---- Document Processing:
+---- Ranked Documenets:
+What is the King’s Student app and how do I use it? 1.0000001192092896
+How can I access my exam & module results? 0.5277652144432068
+What’s the difference between open, limited and closed book exams? 0.4877474308013916
+Where can I study on campus? 0.41394710540771484
+What are the different ways I can be assessed at King’s? 0.40675148367881775
+When are assessment periods and when will I get my exam timetable? 0.3944978713989258
+How can I prepare for assessments at King’s? 0.371750146150589
+Travelling to and taking your exam at ExCeL London 0.37164127826690674
+What is exam and assessment misconduct? 0.3711012005805969
+My progression status is ‘Cannot Progress (B1)’, what does this mean? 0.3330150842666626
+What can I expect during my remote online exam? 0.330763578414917
+My progression status is ‘Pending (X1)’, what does this mean? 0.3198986351490021
+My progression status is ‘Progressed (AM)’, what does this mean? 0.2984101176261902
+My progression status is ‘Cannot Progress (BC)’, what does this mean? 0.2966688275337219
+Travelling to and taking your exam on campus 0.2951585352420807
+How can I make an academic appeal? 0.2924852967262268
+Support when registering for your exams & accessing your exam timetable 0.2894378900527954
+Accessing your online classes through Microsoft Teams 0.2770780920982361
+Outcomes of a mitigating circumstances application 0.19835585355758667
+My progression status is ‘Pending (X2)’, what does this mean? 0.1871970295906067
+
+---- TF-IDF:
+Support when registering for your exams & accessing your exam timetable
+When are assessment periods and when will I get my exam timetable?
+How can I access my exam & module results?
+What’s the difference between open, limited and closed book exams?
+What can I expect during my remote online exam?
+What are the different ways I can be assessed at King’s?
+What is exam and assessment misconduct?
+How can I prepare for assessments at King’s?
+Travelling to and taking your exam at ExCeL London
+Travelling to and taking your exam on campus
+
+----Doc2Vec:
+What is the King’s Student app and how do I use it?
+My progression status is ‘Pending (X2)’, what does this mean?
+My progression status is ‘Pending (X1)’, what does this mean?
+Outcomes of a mitigating circumstances application
+Where can I study on campus?
+My progression status is ‘Progressed (AM)’, what does this mean?
+My progression status is ‘Cannot Progress (B1)’, what does this mean?
+Accessing your online classes through Microsoft Teams
+My progression status is ‘Cannot Progress (BC)’, what does this mean?
+How can I make an academic appeal?

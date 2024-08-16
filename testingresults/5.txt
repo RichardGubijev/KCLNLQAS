@@ -1,0 +1,102 @@
+Question: 'can i travel abroad with a student visa'
+
+---- Answer Processing:
+****'0 - Settling back into King's after studying abroad
+'---- Answer Extraction: 
+ King's offers a range of international opportunities for current students, which might mean they spend time abroad for a short amount of time, a semester or even a whole academic year
+
+---- Summarizer: 
+King's offers a range of international opportunities for current students. Our Global Mobility team have an On Your Return section of the intranet. The Careers & Employability Service is also available to you. 
+
+****'1 - Who are the Faculty Wellbeing Advisors?
+'---- Answer Extraction: 
+ by email
+
+---- Summarizer: 
+Learn about all the support services at King's and some key wellbeing information. You can contact the Student Wellbeing team by email. Use the weekly Newsquiz to test your knowledge of stories you saw on this site. 
+
+****'2 - I'm on a Student Visa, can I travel abroad during my studies?
+'---- Answer Extraction: 
+I'm on a Student Visa, can I travel abroad during my studies
+ can I travel abroad during my studies
+ can I travel abroad during my studies
+ during my studies
+ Any taught student studying at King's on a visa, wishing to travel out of the UK during term time
+ the requirements can vary slightly by country
+ A travel letter is a document you can use to support your application for a visa to travel overseas
+
+---- Summarizer: 
+Home Office regulations require students travelling during term time to have approval from their academic department. If you're only travelling over the weekend, you don't need permission from your department. A travel letter is a document you can use to support your application for a visa. 
+
+****'3 - NMPC: Can I claim travel expenses for travel to my placement?
+'---- Answer Extraction: 
+Can I use my own vehicle to travel to placements?You may only use your own vehicle to travel to placement in exceptional circumstances
+
+---- Summarizer: 
+This article is for students in The Florence Nightingale Faculty of Nursing, Midwifery & Palliative Care. If you are receiving support from the NHS Learning Support Fund, you can claim expenses for the additional costs of travel to placement. 
+
+****'4 - Working in the UK as an international student during your studies
+'---- Answer Extraction: 
+ if you’re physically outside of the UK
+ Most international students who are studying for more than six months are given Student visas
+ Most international students who are studying for more than six months are given Student visas that allow them to work part-ti
+ If your student visa was issued after 6 April 2022
+ty will still be your Student visa sponsor
+ Working in the UK as an international student during your studies I have a Student visa
+ don’t need to apply for a Student or Graduate visa
+ You can start a full-time permanent role while on a Student visa if one of the following applies to you
+ If none of the above apply to you
+ If you have a Student visa, you’re allowed to complete a work placement
+ent record. Taking a permanent role You can start a full-time permanent role while on a Student visa if one of the following applies to you
+ you can work in the UK during and after your studies without any restrictions
+ you can work in the UK during and after your studies without any restrictions and you don’t need the permission of UK Visas and Immigration 
+
+---- Summarizer: 
+If you’re enrolled on a course at an overseas university, you may also complete a work placement as part of your course as long as it doesn’t make up more than 50% of your study in the UK. The University will still be your Student visa sponsor, so you must stay in contact with your department/faculty and keep your contact details up to date. Volunteering is different from voluntary work (unpaid employment) and doesn't count towards your weekly working hours limit. Volunteers will normally help a registered charity or voluntary or public sector organisation. 
+
+
+-----------------------
+---- Document Processing:
+---- Ranked Documenets:
+Settling back into King's after studying abroad 0.9999999403953552
+Who are the Faculty Wellbeing Advisors? 0.6844796538352966
+I'm on a Student Visa, can I travel abroad during my studies? 0.5639334321022034
+NMPC: Can I claim travel expenses for travel to my placement? 0.5228102803230286
+Working in the UK as an international student during your studies 0.492149293422699
+Travelling to the UK as a Visitor 0.4555702209472656
+Arriving with a digital Student visa if you are an EU/EEA/Swiss national 0.4432510733604431
+I'm starting my studies; what do I need to know? 0.43651285767555237
+I’m an international student and want to travel abroad after my studies 0.41321974992752075
+Does King’s College London cover health insurance for international opportunities? 0.4057273268699646
+What is visa re-registration? 0.34547704458236694
+I can’t find what I’m looking for 0.3332781493663788
+Can I apply for another Student visa if I'm resitting, repeating or deferring my studies? 0.31463098526000977
+How do I apply for a Student visa? 0.2677415907382965
+I need to prove my module results and registrations for studying abroad 0.2674495577812195
+What is studying at university like? 0.2602572739124298
+Global mobility & study abroad at King's 0.23397043347358704
+I need to travel to the UK 0.16430403292179108
+
+---- TF-IDF:
+Settling back into King's after studying abroad
+I’m an international student and want to travel abroad after my studies
+I'm on a Student Visa, can I travel abroad during my studies?
+I need to travel to the UK
+Can I apply for another Student visa if I'm resitting, repeating or deferring my studies?
+What is visa re-registration?
+How do I apply for a Student visa?
+Travelling to the UK as a Visitor
+Global mobility & study abroad at King's
+Arriving with a digital Student visa if you are an EU/EEA/Swiss national
+
+----Doc2Vec:
+Settling back into King's after studying abroad
+Working in the UK as an international student during your studies
+Does King’s College London cover health insurance for international opportunities?
+I can’t find what I’m looking for
+Who are the Faculty Wellbeing Advisors?
+I'm starting my studies; what do I need to know?
+I need to prove my module results and registrations for studying abroad
+What is studying at university like?
+NMPC: Can I claim travel expenses for travel to my placement?
+Global mobility & study abroad at King's

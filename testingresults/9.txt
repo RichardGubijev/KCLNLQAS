@@ -1,0 +1,80 @@
+Question: 'when are transcripts released'
+
+---- Answer Processing:
+****'0 - What will happen with my funding when I return from postgraduate taught interruption?
+'---- Answer Extraction: 
+
+---- Summarizer: 
+What will happen with my funding when I return from postgraduate taught interruption? · Student Services Online You’re offline. This is a read only version of the page. Skip to main content Skip to footer 
+
+****'1 - I need to prove I’ve finished my course and am awaiting results
+'---- Answer Extraction: 
+
+---- Summarizer: 
+I need to prove I’ve finished my course and am awaiting results. Most undergraduate courses finish in spring in May/June. Most postgraduate taught courses finish at the end of September. It often takes time for results to be released after you have completed assessments. 
+
+****'2 - What is the Higher Education Achievement Report (HEAR)?
+'---- Answer Extraction: 
+ through your Gradintelligence account
+ January, July and September
+ Higher Education Achievement Report (HEAR) is an electronic document produced by a higher education institution that provides a record of student achievement during their period of study
+
+---- Summarizer: 
+Most of the information on the HEAR is nationally defined and can’t be changed. However, students will have the option to display some items in the ‘Additional information’ section, or section 6.1. This section is particularly useful, because it provides a place for your extra-curricular activities to be officially recorded. 
+
+****'3 - I have a student loan and have transferred to King's from another institution, what should I do?
+'---- Answer Extraction: 
+
+---- Summarizer: 
+I have a student loan and have transferred to King's from another institution, what should I do? Before starting at King’s, you can let Student Finance know that you have changed your course or university using your online account. If your course has begun you can’t update Student Finance about this change. 
+
+****'4 - When are assessment periods and when will I get my exam timetable?
+'---- Answer Extraction: 
+
+---- Summarizer: 
+When are assessment periods and when will I get my exam timetable? 
+
+
+-----------------------
+---- Document Processing:
+---- Ranked Documenets:
+What will happen with my funding when I return from postgraduate taught interruption? 1.000000238418579
+I need to prove I’ve finished my course and am awaiting results 0.4608267545700073
+What is the Higher Education Achievement Report (HEAR)? 0.4066784977912903
+I have a student loan and have transferred to King's from another institution, what should I do? 0.36287251114845276
+When are assessment periods and when will I get my exam timetable? 0.3494022786617279
+I’m King’s alumni and I need to prove my degree 0.32240790128707886
+NMPC: What you need to know about submitting assessments, coursework & receiving results 0.291049063205719
+When will I receive the online enrolment task invitation email? 0.29014700651168823
+How long after I graduate will my student IT account be closed? 0.2883395552635193
+I need a transcript 0.2861438989639282
+I'm a postgraduate taught student who's had results released, what more do I need to know? 0.2843279540538788
+International and immigration advice when university services are closed 0.27074018120765686
+NMPC: Key information about your course administration 0.19778843224048615
+I need a specialised transcript for my programme 0.19613435864448547
+How can I access my Gradintelligence account? 0.17812739312648773
+I need to prove my module results so far 0.14898839592933655
+
+---- TF-IDF:
+I need a specialised transcript for my programme
+I’m King’s alumni and I need to prove my degree
+I need a transcript
+What will happen with my funding when I return from postgraduate taught interruption?
+When are assessment periods and when will I get my exam timetable?
+International and immigration advice when university services are closed
+I need to prove my module results so far
+I'm a postgraduate taught student who's had results released, what more do I need to know?
+When will I receive the online enrolment task invitation email?
+I have a student loan and have transferred to King's from another institution, what should I do?
+
+----Doc2Vec:
+I need a specialised transcript for my programme
+What is the Higher Education Achievement Report (HEAR)?
+I’m King’s alumni and I need to prove my degree
+I need a transcript
+How can I access my Gradintelligence account?
+I need to prove I’ve finished my course and am awaiting results
+How long after I graduate will my student IT account be closed?
+I need to prove my module results so far
+NMPC: What you need to know about submitting assessments, coursework & receiving results
+NMPC: Key information about your course administration

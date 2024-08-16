@@ -1,0 +1,89 @@
+Question: 'i am homeless what support can i get'
+
+---- Answer Processing:
+****'0 - Housing and homelessness advice when university services are closed
+'---- Answer Extraction: 
+ contact your local Housing Options department
+ contact your local Housing Options department
+ housing and homelessness advice
+ during office hours
+
+---- Summarizer: 
+Housing and homelessness advice when university services are closed. Money & Housing Advisers are available Monday to Friday 09.00-17.00. For support during office hours, read our article I am homeless or at risk of homelessness, what should I do? If you find yourself facing a housing issue, we advise that you contact your local Housing Options department. 
+
+****'1 - What financial support is there to help me through the cost of living crisis?
+'---- Answer Extraction: 
+The King’s Hardship Fund
+ interim assistance
+ Money & Housing Advice Service
+
+---- Summarizer: 
+At King’s, we have a range of support on offer for you to access. This includes funding, discounts and specialist advice services. Our hardship funds are available to help with day-to-day living costs. 
+
+****'2 - Where can I find charity and not-for-profit accommodation?
+'---- Answer Extraction: 
+er support & advice If you need help with your housing contract
+
+---- Summarizer: 
+Accommodation provided by not-for-profit organisations or registered charities is often cheaper than private rentals. Some of the homes have a religious affiliation but may be open to people from all faiths and none. Always do your research before signing a tenancy agreement. 
+
+****'3 - My progression status is E1, what does this mean?
+'---- Answer Extraction: 
+I need help finding somewhere to live
+
+---- Summarizer: 
+Your full results are now available to view on Student Records. You may wish to get written confirmation of your results so far for prospective employers or other third parties. If you’ve received a link to this article in July, we will contact you by email from mid-August. 
+
+****'4 - What is Student Services Online?
+'---- Answer Extraction: 
+
+---- Summarizer: 
+Student Services Online was launched on 3 June 2019. It is the fastest way for students, staff and others to find the answers to their questions about King's College London's student services. 
+
+
+-----------------------
+---- Document Processing:
+---- Ranked Documenets:
+Housing and homelessness advice when university services are closed 1.000000238418579
+What financial support is there to help me through the cost of living crisis? 0.6657705903053284
+Where can I find charity and not-for-profit accommodation? 0.5444093942642212
+My progression status is E1, what does this mean? 0.5029065608978271
+What is Student Services Online? 0.38662463426589966
+My progression status is ‘Progressed (AJ)’, what does this mean? 0.31886255741119385
+What student support services are available at King's? 0.3159659802913666
+My progression status is AP, what does this mean? 0.3159659802913666
+I am homeless or at risk of homelessness what should I do? 0.3159659802913666
+International student advice & support at King's 0.24221031367778778
+What student support services are available at King's? 0.23329445719718933
+I have a ‘HyFlex’ seminar/tutorial on my timetable; what is it? 0.22505080699920654
+My progression status is BB, what does this mean? 0.19361692667007446
+My progression status is AV, what does this mean? 0.18807408213615417
+What student support services are available at King's? 0.18211238086223602
+What can I do to help manage anxious feelings? 0.15938176214694977
+My progression status is ‘Progressed (AM)’, what does this mean? 0.15026788413524628
+I’m struggling with my mental health while on placement, what should I do? 0.10388185828924179
+My progression status is ‘Progressed (AE)’, what does this mean? 0.04100826382637024
+
+---- TF-IDF:
+Housing and homelessness advice when university services are closed
+I’m struggling with my mental health while on placement, what should I do?
+International student advice & support at King's
+What student support services are available at King's?
+What student support services are available at King's?
+What student support services are available at King's?
+What can I do to help manage anxious feelings?
+My progression status is ‘Progressed (AM)’, what does this mean?
+I am homeless or at risk of homelessness what should I do?
+What financial support is there to help me through the cost of living crisis?
+
+----Doc2Vec:
+Housing and homelessness advice when university services are closed
+Where can I find charity and not-for-profit accommodation?
+My progression status is ‘Progressed (AE)’, what does this mean?
+What is Student Services Online?
+My progression status is ‘Progressed (AJ)’, what does this mean?
+My progression status is AP, what does this mean?
+My progression status is AV, what does this mean?
+My progression status is BB, what does this mean?
+My progression status is E1, what does this mean?
+I have a ‘HyFlex’ seminar/tutorial on my timetable; what is it?
