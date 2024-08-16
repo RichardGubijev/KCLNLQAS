@@ -6,10 +6,10 @@ class tfidf:
         self.vectorizer = TfidfVectorizer()
         self.tfidf_matrix = self.vectorizer.fit_transform(documents)
     
-    def search(self, look_up_docuement): 
-        sparse_matrix_x = self.vectorizer.transform([look_up_docuement])
-        cosine_similarities = cosine_similarity(sparse_matrix_x, self.tfidf_matrix).flatten()
-        return cosine_similarities
+    def search(self, search_query): 
+        doc_term_matrix = self.vectorizer.transform([search_query])
+        cos_sim = cosine_similarity(doc_term_matrix, self.tfidf_matrix).flatten()
+        return cos_sim
 
     def find_closest(self, search_question, k):
         similarities = self.search(search_question)

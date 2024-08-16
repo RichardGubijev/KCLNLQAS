@@ -8,10 +8,6 @@ from documents_retriever import filter_documents
 from docuemenet_reranker import docuemenet_reranker
 from document_summarizer import document_summarizer
 
-# Summarizer, needs the articiles broken down into chunks
-# Just steal the one from QA
-# save results to a log file
-
 def download_data():
     if os.path.exists("prepared_data.json"):
         dc = input("Do you want to (re)download the data? (Y/N):  ")
@@ -41,7 +37,6 @@ def process_question(question):
     log = f"Question: '{question}'\n"
     tfidf_set, embed_set = filter_documents(question, 10)
     whole_set = tfidf_set.union(embed_set)
-    whole_set = tfidf_set
     sorted_docs = reranker.rerank_indicies(question, whole_set)
     sorted_docs.sort(key = lambda x: x[1], reverse = True)
     doc_index = 0
@@ -52,14 +47,14 @@ def process_question(question):
     doc_index = sorted_docs[doc_index][0]
 
     log = print_log(log, "---- Answer Processing:\n")
-    log = print_log(log, f"**** Used '{titles[doc_index]}' for Answer Processing")
+    log = print_log(log, f"**** Used '{titles[doc_index]}' for Answer Processing\n")
 
     log = print_log(log, "---- Answer Extraction: \n")
     for ans in answers:
-        log = print_log(log, f"{ans}" + "\n")
+        log = print_log(log, f"{ans[0]}" + "\n")
 
     log = print_log(log, "---- Summarizer: \n")
-    best_doc = texts[sorted_docs[0][0]]
+    best_doc = texts[doc_index]
     log = print_log(log, f"{summarizer.summarize_best_chunk(question, best_doc)[0]['summary_text']} \n")
 
     log = print_log(log, "---- Document Processing:\n") 
@@ -78,7 +73,7 @@ def process_question(question):
     return log
 
 
-# download_data()
+download_data()
 docs = load_data_as_dataframe("prepared_data.json")
 titles = docs["title"]
 texts = docs["text"]
@@ -93,3 +88,4 @@ while True:
     question = input("Enter your question: ")
     log = process_question(question)
     write_to_log(log, f"{log_index}.txt")
+    log_index += 1

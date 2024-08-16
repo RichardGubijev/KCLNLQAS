@@ -3,6 +3,10 @@ test*
 # Byte-compiled / optimized / DLL files
 __pycache__/
 acrhive/
+archive/
+archive/*
+.conda/*
+.conda
 *.py[cod]
 *$py.class
 *.json
