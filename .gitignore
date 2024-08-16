@@ -13,7 +13,6 @@ archive/*
 !prepared_data.json
 !webdata.json
 *test.py
-*.model
 # C extensions
 *.so
 
