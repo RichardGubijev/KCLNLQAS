@@ -52,29 +52,18 @@ def process_question(question):
 
     return log
 
-docs = load_data_as_dataframe("prepared_data.json")
-titles = docs["title"]
-texts = docs["text"]
-reranker = docuemenet_reranker(docs)
+df = load_data_as_dataframe("prepared_data.json")
+titles = df["title"]
+texts = df["text"]
+reranker = docuemenet_reranker(df)
 summarizer = document_summarizer(reranker=reranker)
-qa = answer_extractor(docs)
-
-# QUESTIONS = [
-#     "I have been spiked, what should I do?", 
-#     "How can I register with a doctor?", 
-#     "I am homeless, what support can I get?", 
-#     "When do graduation ceremonies take place?",
-#     "What is the sunflower disability lanyard scheme?",
-#     "Can I travel abroad with a student visa?",
-#     "Who can help me with long term mental health conditions?",
-#     "When is the second exam period?",
-#     "By when do I need to apply for mitigating circumstances?",
-#     "When are transcripts released?"
-#     ]
+qa = answer_extractor(df)
 
 QUESTIONS = [
-    "I have been a victim of a crime, what should I do?",
-    "I am disabled student what support is there for me?"]
+    "When are assessment periods and when will I get my exam timetable?"
+    ,"How can I access my exam & module results?"
+    ,"What is the academic calendar?"
+    ]
 
 log_index = 0
 for q in QUESTIONS:

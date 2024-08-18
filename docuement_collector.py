@@ -100,4 +100,6 @@ def scrape_website():
     save_as_json(data, "webdata.json")
 
 if __name__ == "__main__":
+    start_time = time.time()
     scrape_website()
+    print(f"Took {time.time() - start_time}s")

@@ -1,4 +1,5 @@
 import json
+import time
 import bs4
 import os
 import numpy as np
@@ -95,4 +96,6 @@ def prepare_data():
     save_as_json(filtered_DATA, "prepared_data.json")
 
 if __name__ == "__main__":
+    start_time = time.time()
     prepare_data()
+    print(f"Took {time.time() - start_time}s")
