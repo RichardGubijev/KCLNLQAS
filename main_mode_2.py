@@ -1,4 +1,5 @@
 import string
+import time
 from documents_retriever import load_data_as_dataframe
 from answer_extraction import answer_extractor
 from documents_retriever import filter_documents
@@ -59,14 +60,12 @@ reranker = docuemenet_reranker(df)
 summarizer = document_summarizer(reranker=reranker)
 qa = answer_extractor(df)
 
-QUESTIONS = [
-    "When are assessment periods and when will I get my exam timetable?"
-    ,"How can I access my exam & module results?"
-    ,"What is the academic calendar?"
-    ]
+QUESTIONS = []
 
 log_index = 0
 for q in QUESTIONS:
+    start_time = time.time()
     log = process_question(q)
     write_to_log(log, f"{log_index}.txt")
     log_index += 1
+    print(f"Took: f{time.time() - start_time}")

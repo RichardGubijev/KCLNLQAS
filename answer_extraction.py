@@ -3,10 +3,6 @@ import torch.nn.functional as F
 import torch
 import re
 
-# DISABLE SYMLINKS WARNING MESSAGE IN CONSOLE 
-import os
-os.environ["HF_HUB_DISABLE_SYMLINKS_WARNING"] = "1"
-
 # CODE ADAPTED FROM: https://huggingface.co/docs/transformers/main/en/model_doc/roberta#transformers.RobertaForQuestionAnswering
 # MODEL FROM: https://huggingface.co/deepset/roberta-base-squad2
 
