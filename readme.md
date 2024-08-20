@@ -10,4 +10,4 @@ Might require installing pytorch manually.
 
 To run the code `python main.py`
 
-# Richard "Jade" Gubijev 
+# Richard Gubijev 
